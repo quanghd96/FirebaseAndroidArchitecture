@@ -8,18 +8,18 @@ import com.google.firebase.firestore.QuerySnapshot
 class MobileRepository {
 
     var firebaseRepository = FirestoreRepository()
-    var allMobile: MutableLiveData<List<String>> = MutableLiveData()
+    var allMobile: MutableLiveData<List<Mobile>> = MutableLiveData()
 
-    fun getAllMobile(): LiveData<List<String>> {
+    fun getAllMobile(): LiveData<List<Mobile>> {
         firebaseRepository.getAllMobile().addSnapshotListener(EventListener<QuerySnapshot> { value, e ->
             if (e != null) {
                 allMobile.value = null
                 return@EventListener
             }
 
-            val savedAddressList: MutableList<String> = mutableListOf()
+            val savedAddressList: MutableList<Mobile> = mutableListOf()
             for (doc in value!!) {
-                val addressItem = doc.data.values.toString()
+                val addressItem = doc.toObject(Mobile::class.java)
                 savedAddressList.add(addressItem)
             }
             allMobile.value = savedAddressList

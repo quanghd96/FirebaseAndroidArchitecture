@@ -11,8 +11,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    val listMobile = ArrayList<String>()
-    lateinit var adapter: ArrayAdapter<String>
+    val listMobile = ArrayList<Mobile>()
+    lateinit var adapter: ArrayAdapter<Mobile>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         val mobileViewModel = ViewModelProviders.of(this).get(MobileViewModel::class.java)
         mobileViewModel.getAllMobile().observe(this, Observer {
+            adapter.clear()
             adapter.addAll(it)
             adapter.notifyDataSetChanged()
 //            Toast.makeText(this, it.size.toString(), Toast.LENGTH_LONG).show()

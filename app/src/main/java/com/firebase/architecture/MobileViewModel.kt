@@ -7,9 +7,9 @@ import androidx.lifecycle.LiveData
 class MobileViewModel(application: Application) : AndroidViewModel(application) {
 
     private var repository: MobileRepository = MobileRepository()
-    private var allMobile: LiveData<List<String>> = repository.getAllMobile()
+    private var allMobile: LiveData<List<Mobile>> = repository.getAllMobile()
 
-    fun getAllMobile(): LiveData<List<String>> {
+    fun getAllMobile(): LiveData<List<Mobile>> {
         return allMobile
     }
 
