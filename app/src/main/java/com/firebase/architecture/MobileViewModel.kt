@@ -13,4 +13,8 @@ class MobileViewModel(application: Application) : AndroidViewModel(application) 
         return allMobile
     }
 
+    fun addMobile(name: String) {
+        repository.addMobile(name)
+    }
+
 }
