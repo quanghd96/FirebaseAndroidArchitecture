@@ -12,17 +12,22 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    val listMobile = ArrayList<Mobile>()
-    lateinit var adapter: ArrayAdapter<Mobile>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+        val binding =
+            DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
 
-        adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listMobile)
+        val listMobile = ArrayList<Mobile>()
+        val adapter = ArrayAdapter(
+            this, android.R.layout.simple_list_item_1,
+            listMobile
+        )
         binding.adapter = adapter
 
-        val mobileViewModel = ViewModelProviders.of(this).get(MobileViewModel::class.java)
+        val mobileViewModel = ViewModelProviders
+            .of(this)
+            .get(MobileViewModel::class.java)
         mobileViewModel.getAllMobile().observe(this, Observer {
             adapter.clear()
             adapter.addAll(it)
