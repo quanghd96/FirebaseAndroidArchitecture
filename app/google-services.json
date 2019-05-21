@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "40907319594",
+    "firebase_url": "https://fir-androidarchitecture-d87f0.firebaseio.com",
+    "project_id": "fir-androidarchitecture-d87f0",
+    "storage_bucket": "fir-androidarchitecture-d87f0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:40907319594:android:0c41ff15f4715478",
+        "android_client_info": {
+          "package_name": "com.firebase.architecture"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "40907319594-3iujgkm3kfuhtu7u44980gur23rqvfbl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC06bbbEbIVEY93WX96XQoIyKHj0j5JZng"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "40907319594-3iujgkm3kfuhtu7u44980gur23rqvfbl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
