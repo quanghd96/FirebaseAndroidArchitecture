@@ -4,6 +4,7 @@
         xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
                 name="adapter"
                 type="android.widget.ArrayAdapter"/>
@@ -32,6 +33,7 @@
                 android:layout_width="wrap_content"
                 android:id="@+id/btnAdd"
                 android:layout_height="wrap_content"
+                android:src="@drawable/ic_add"
                 android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
