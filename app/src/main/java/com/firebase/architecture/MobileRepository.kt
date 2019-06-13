@@ -30,6 +30,7 @@ class MobileRepository {
     }
 
     fun addMobile(name: String) {
-        FirebaseFirestore.getInstance().collection("mobile").document("name").set(name)
+        val mobile = Mobile(name)
+        FirebaseFirestore.getInstance().collection("mobile").add(mobile)
     }
 }
